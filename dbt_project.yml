@@ -1,13 +1,10 @@
 config-version: 2
 
-name: "jaffle_shop"
-version: "3.0.0"
-require-dbt-version: ">=1.5.0"
+name: "jaffle_shop_mdpi"
+version: "1.0.0"
+require-dbt-version: ">=1.9.0"
 
-dbt-cloud:
-  project-id: 275557 # Put your project id here
-
-profile: default # Put your profile here
+profile: default
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -20,17 +17,18 @@ target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
-
-vars:
-  "dbt_date:time_zone": "America/Los_Angeles"
+  - "logs"
 
 seeds:
-  jaffle_shop:
+  jaffle_shop_mdpi:
     +schema: raw
+    +materialized: table
 
 models:
-  jaffle_shop:
+  jaffle_shop_mdpi:
     staging:
+      +schema: staging
       +materialized: view
     marts:
+      +schema: mart
       +materialized: table
