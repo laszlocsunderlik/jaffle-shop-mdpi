@@ -11,6 +11,8 @@ profiles.yml
 .DS_Store
 
 .user.yml
-
+.git
 .ruff_cache
 __pycache__
+.env
+jaffle_shop_mdpi.egg-info/

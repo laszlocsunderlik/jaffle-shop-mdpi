@@ -1,0 +1,22 @@
+[project]
+name = "jaffle-shop-mdpi"
+version = "0.0.1"
+description = "Jaffle Shop dbt project for MDPI"
+requires-python = ">=3.8"
+dependencies = [
+    "dbt-core>=1.9.4",
+    "dbt-postgres>=1.9.0",
+    "requests==2.31.0",
+    "pre-commit>=3.6.0",
+    "jafgen>=0.4.11",
+    "sqlfluff>=2.3.0",
+    "sqlfluff-templater-dbt>=2.3.0",
+    "ruff>=0.3.4",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
