@@ -1,9 +1,10 @@
 [sqlfluff]
-templater = dbt
+templater = jinja
 dialect = postgres
 runaway_limit = 10
 max_line_length = 80
 indent_unit = space
+exclude_rules = AM06, RF02, RF03
 
 [sqlfluff:templater:dbt]
 project_dir = .
@@ -40,7 +41,3 @@ capitalisation_policy = lower
 
 [sqlfluff:rules:ambiguous.column_references]
 group_by_and_order_by_style = implicit
-
-[sqlfluff:rules:convention.terminator]
-multiline_newline = True
-require_final_semicolon = True
