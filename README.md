@@ -1,4 +1,4 @@
-# Jaffle Shop MDPI Assignment
+# Jaffle Shop
 
 This project is a demonstration of using dbt with a PostgreSQL database, managed with Docker and UV.
 
@@ -13,8 +13,8 @@ This project is a demonstration of using dbt with a PostgreSQL database, managed
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:laszlocsunderlik/jaffle-shop-mdpi.git
-cd jaffle-shop-mdpi
+git clone git@github.com:laszlocsunderlik/jaffle-shop-playground.git
+cd jaffle-shop
 ```
 
 ### 2. Set Up Python Environment
@@ -99,7 +99,7 @@ cd jaffle-shop-mdpi
 
 - **Host**: localhost
 - **Port**: 5430
-- **Database**: jaffle_shop_mdpi
+- **Database**: jaffle_shop
 - **Username**: postgres
 - **Password**: postgres
 

@@ -15,7 +15,7 @@ profiles.yml
 .ruff_cache
 __pycache__
 .env
-jaffle_shop_mdpi.egg-info/
+jaffle_shop_playground.egg-info/
 DOCKER_SETUP.md
 PYTHON_SETUP.md
 README.md

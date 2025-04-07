@@ -1,6 +1,6 @@
 config-version: 2
 
-name: jaffle_shop_mdpi
+name: jaffle_shop
 version: "1.0.0"
 require-dbt-version: ">=1.9.0"
 
@@ -20,11 +20,11 @@ clean-targets:
   - "logs"
 
 seeds:
-  jaffle_shop_mdpi:
+  jaffle_shop:
     +schema: raw
 
 models:
-  jaffle_shop_mdpi:
+  jaffle_shop:
     staging:
       +schema: staging
       +materialized: view
