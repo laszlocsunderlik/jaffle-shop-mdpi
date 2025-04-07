@@ -89,19 +89,7 @@ cd jaffle-shop-mdpi
 
 ### 6. Lint SQL files
 
-1. **Lint SQL files**:
-
-   ```bash
-   sqlfluff lint models/
-   ```
-
-2. **Fix SQL files**:
-
-   ```bash
-   sqlfluff fix models/
-   ```
-
-3. **pre-commit runs**
+1. **pre-commit runs**
 
    ```bash
    pre-commit run
