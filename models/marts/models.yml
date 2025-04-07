@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: model_1
+    description: Calculates the avg number of items per order for each store. Yeah, it's pretty straightforward.
+    columns:
+      - name: store_name
+        description: Store name
+        tests:
+          - not_null
+          - unique
+      - name: avg_items_per_order
+        description: Avg number of items ordered per order.
+
+  - name: model_2
+    description: Figures out the avg price with tax for each product and add counts sold item 
+    columns:
+      - name: product_name
+        description: Name of the product.
+        tests:
+          - not_null
+      - name: items_sold
+        description: Total number of items sold
+      - name: avg_price_with_tax
+        description: Avg price of the product including tax.
+
+  - name: model_3
+    description: Ranks customers by total invoiced amount per month. Top 3 by month.
+    columns:
+      - name: month_of_the_year
+        description: Month of the order, original column truncated to YYYY-MM
+        tests:
+          - not_null
+      - name: customer_name
+        description: Name of the customer.
+      - name: total_invoiced
+        description: Total invoiced amount for the customer.
+
+  - name: model_4
+    description: Calculates month by monthj change in total invoiced amounts. Show trends.
+    columns:
+      - name: month_of_order
+        description: Month of the order, original column truncated to YYYY-MM
+        tests:
+          - not_null
+      - name: total_invoiced
+        description: Total invoiced amount for the month.
+      - name: month_vs_month_change
+        description: Percentage change in invoiced amount compared to the previous month.
+
+  - name: model_5
+    description: Calculates total cost paid for supplies sold in 2016.
+    columns:
+      - name: supply_id
+        description: ID of the supply.
+        tests:
+          - not_null
+      - name: sku
+        description: SKU unit.
+      - name: supply_name
+        description: Name of the supply.
+      - name: product_type
+        description: Type of the product.
+      - name: total_cost
+        description: Total cost paid for the supply.
