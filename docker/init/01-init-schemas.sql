@@ -1,11 +1,11 @@
-CREATE SCHEMA IF NOT EXISTS raw;
-CREATE SCHEMA IF NOT EXISTS staging;
-CREATE SCHEMA IF NOT EXISTS mart;
+create schema if not exists raw;
+create schema if not exists staging;
+create schema if not exists mart;
 
-GRANT ALL ON SCHEMA raw TO postgres;
-GRANT ALL ON SCHEMA staging TO postgres;
-GRANT ALL ON SCHEMA mart TO postgres;
+grant all on schema raw to postgres;
+grant all on schema staging to postgres;
+grant all on schema mart to postgres;
 
-ALTER DEFAULT PRIVILEGES IN SCHEMA raw GRANT ALL ON TABLES TO postgres;
-ALTER DEFAULT PRIVILEGES IN SCHEMA staging GRANT ALL ON TABLES TO postgres;
-ALTER DEFAULT PRIVILEGES IN SCHEMA mart GRANT ALL ON TABLES TO postgres;
+alter default privileges in schema raw grant all on tables to postgres;
+alter default privileges in schema staging grant all on tables to postgres;
+alter default privileges in schema mart grant all on tables to postgres;

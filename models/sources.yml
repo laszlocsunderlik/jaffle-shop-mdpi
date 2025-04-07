@@ -6,13 +6,54 @@ sources:
     tables:
       - name: raw_customers
         description: Customer data with id and name
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+
       - name: raw_items
         description: Order by items with order id
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: order_id
+            tests:
+              - not_null
       - name: raw_orders
         description: Orders by customer, also contains location information and payment before and after tax and total
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: customer
+            tests:
+              - relationships:
+                  to: ref('raw_customers')
+                  field: id
       - name: raw_products
         description: Products with type, price and description
+        columns:
+          - name: sku
+            tests:
+              - relationships:
+                  to: ref('raw_supplies')
+                  field: sku
       - name: raw_stores
         description: Stores data with name, opened at and tax
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
       - name: raw_supplies
-        description: information about ordered ingreadients for the products
+        description: information about ordered ingredients for the products
+        columns:
+          - name: sku
+            tests:
+              - relationships:
+                  to: ref('raw_products')
+                  field: sku

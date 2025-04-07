@@ -13,7 +13,7 @@ models:
         description: Avg number of items ordered per order.
 
   - name: model_2
-    description: Figures out the avg price with tax for each product and add counts sold item 
+    description: Figures out the avg price with tax for each product and add counts sold item
     columns:
       - name: product_name
         description: Name of the product.

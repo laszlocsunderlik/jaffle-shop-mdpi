@@ -5,6 +5,7 @@ with monthly_invoiced as (
     from {{ ref('orders_items_view') }}
     group by to_char(ordered_at::date, 'YYYY-MM')
 ),
+
 monthly_variation_invoiced as (
     select
         month_of_order,
@@ -17,10 +18,10 @@ select
     month_of_order,
     total_invoiced,
     round(
-        case 
+        case
             when prev_invoiced is null or prev_invoiced = 0 then null
             else ((total_invoiced - prev_invoiced) * 100.0 / prev_invoiced)
-        end, 
+        end,
         2
     ) as month_vs_month_change
 from monthly_variation_invoiced
