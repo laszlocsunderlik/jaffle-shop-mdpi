@@ -1,8 +1,8 @@
 packages:
   - package: dbt-labs/dbt_utils
-    version: 1.1.1
-  - package: godatadriven/dbt_date
-    version: 0.10.0
-  - git: https://github.com/dbt-labs/dbt-audit-helper.git
-    revision: b8f3a3348ce0ff8afc3aa4b9ade2123b00772473
-sha1_hash: f2a73967505955af30d18f70489a423fd47cdf79
+    version: 1.3.0
+  - package: calogica/dbt_expectations
+    version: 0.10.4
+  - package: calogica/dbt_date
+    version: 0.10.1
+sha1_hash: 76849041a61d4fb6a69694f11b1e8d3decc17def
