@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_jaffle_shop_data
+    schema: raw
+    tables:
+      - name: raw_customers
+        description: Customer data with id and name
+      - name: raw_items
+        description: Order by items with order id
+      - name: raw_orders
+        description: Orders by customer, also contains location information and payment before and after tax and total
+      - name: raw_products
+        description: Products with type, price and description
+      - name: raw_stores
+        description: Stores data with name, opened at and tax
+      - name: raw_supplies
+        description: information about ordered ingreadients for the products
