@@ -56,6 +56,12 @@ cd jaffle-shop-mdpi
 
 ### 4. Load sample data
 
+0. **Start with a debug to see your are ready**
+
+   ```bash
+   dbt debug
+   ```
+
 1. **Download dbt packages**
 
    ```bash
