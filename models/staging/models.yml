@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: orders_items_view
+    description: Since in the mart layer we have to join the orders and items tables, the view is created in the staging
+    columns:
+      - name: order_id
+        description: Unique identifier for the order
+        tests:
+          - not_null
+      - name: customer
+        description: Customer id with the order
+        tests:
+          - relationships:
+              to: source('raw_jaffle_shop_data', 'raw_customers')
+              field: id
+      - name: ordered_at
+        description: When the order was placed
+      - name: order_total
+        description: Total amount of the order
+      - name: store_id
+        description: ID of the store where the order was placed
+        tests:
+          - relationships:
+              to: source('raw_jaffle_shop_data', 'raw_stores')
+              field: id
+      - name: item_id
+        description: Unique id for the order item
+        tests:
+          - not_null
+      - name: sku
+        description: Sku of the ordered item
+        tests:
+          - relationships:
+              to: source('raw_jaffle_shop_data', 'raw_products')
+              field: sku

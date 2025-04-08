@@ -2,6 +2,10 @@
 
 This project is a demonstration of using dbt with a PostgreSQL database, managed with Docker and UV.
 
+There is a github CI pipeline implementation for pre-commit hooks using:
+   - ruff-pre-commit
+   - sqlfluff (lint and fix)
+
 ## Prerequisites
 
 - Docker
@@ -47,6 +51,10 @@ cd jaffle-shop-playground
    ```bash
    docker-compose up -d
    ```
+
+   The initialization scripts are located in the `docker/init` directory.
+   This script runs when the Docker container is initialized.
+   It creates the 3 main schemas: raw, staging, mart
 
 2. **Verify PosrgreSQL is running**:
 
