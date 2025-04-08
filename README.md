@@ -14,7 +14,7 @@ This project is a demonstration of using dbt with a PostgreSQL database, managed
 
 ```bash
 git clone git@github.com:laszlocsunderlik/jaffle-shop-playground.git
-cd jaffle-shop
+cd jaffle-shop-playground
 ```
 
 ### 2. Set Up Python Environment
